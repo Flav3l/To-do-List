@@ -1,16 +1,32 @@
 console.log('My code is running');
 
-let inputField = document.querySelector(".userInput");
+var currentItem = "";
 
-inputField.addEventListener('keypress', event => {
+let inputField = document.querySelector(".userInput");
+let SubmitButton = document.querySelector('.submit');
+
+let submit = () => {
+    if (currentItem != "") {
+     var item;
+     var listItems = document.querySelector('.itemList')
+     item.appendChild(document.createTextNode(currentItem))
+     listItems.appendChild(item); 
+    }
+ }
+ 
+
+    inputField.addEventListener('keypress', event => {
     if(event.key == 'Enter'){
-        console.log("enter key pressed");
+         submit();
+        console.log('enter was pressed')
+    }    else {
+        currentItem = document.querySelector('.userInput').value
+        console.log(currentItem)
     }
 });
 
-// var enterPress =  () => {
-    
-// }
-// console.log(enterPress())
 
-var currentItem = "";
+console.log()
+
+
+
