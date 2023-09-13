@@ -13,9 +13,7 @@ let submit = () => {
         
         document.querySelectorAll('li').forEach(li => {
             li.addEventListener('click', () => strikeThrough(li));
-            document.querySelectorAll('.delete').forEach(dButton => { 
-                dButton.addEventListener('click', () => deleteFinished(li)) 
-            });
+                li.children[0].addEventListener('click', () => deleteFinished(li)) 
     })
 inputField.value = "";
     }
