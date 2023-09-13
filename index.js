@@ -1,32 +1,31 @@
 console.log('My code is running');
 
-var currentItem = "";
+
 
 let inputField = document.querySelector(".userInput");
 let SubmitButton = document.querySelector('.submit');
+let listItems = document.querySelector('.itemList');
+
 
 let submit = () => {
-    if (currentItem != "") {
-     var item;
-     var listItems = document.querySelector('.itemList')
-     item.appendChild(document.createTextNode(currentItem))
-     listItems.appendChild(item); 
+    if (inputField.value != "") {
+    listItems.innerHTML += `<li>${inputField.value}</li>`
+    inputField.value = "";
     }
- }
- 
+}
 
-    inputField.addEventListener('keypress', event => {
+inputField.addEventListener('keypress', event => {
     if(event.key == 'Enter'){
-         submit();
-        console.log('enter was pressed')
-    }    else {
-        currentItem = document.querySelector('.userInput').value
-        console.log(currentItem)
+        submit();
     }
 });
 
+SubmitButton.addEventListener('click', submit)
 
-console.log()
+let banana = document.querySelector('li');
 
+let strikeThrough = (item) => {
+item.style.textDecoration = 'line-through';
+}
 
-
+banana.addEventListener('click', strikeThrough);
