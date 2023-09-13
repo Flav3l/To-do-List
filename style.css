@@ -1,3 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.container {
+    padding: 0 30px;
+    outline: 3px solid;
+
+}
+
+header {
+    background-color: orange;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
 h1 { 
-    color: purple;
+    color: black;
 }
