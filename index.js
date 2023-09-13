@@ -5,11 +5,12 @@ console.log('My code is running');
 let inputField = document.querySelector(".userInput");
 let SubmitButton = document.querySelector('.submit');
 let listItems = document.querySelector('.itemList');
+let banana = document.querySelectorAll('li');
 
 
 let submit = () => {
     if (inputField.value != "") {
-    listItems.innerHTML += `<li>${inputField.value}</li>`
+    listItems.innerHTML += `<li class="unselected">${inputField.value}</li>`
     inputField.value = "";
     }
 }
@@ -22,10 +23,9 @@ inputField.addEventListener('keypress', event => {
 
 SubmitButton.addEventListener('click', submit)
 
-let banana = document.querySelector('li');
 
-let strikeThrough = (item) => {
-item.style.textDecoration = 'line-through';
-}
 
-banana.addEventListener('click', strikeThrough);
+ listItems.addEventListener('click').style.textDecoration = "line-through";
+    
+
+

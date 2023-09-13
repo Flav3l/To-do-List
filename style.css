@@ -19,3 +19,12 @@ header {
 h1 { 
     color: black;
 }
+
+li {
+    list-style: none;
+}
+
+li:after {
+    text-decoration: line-through;
+}
+
